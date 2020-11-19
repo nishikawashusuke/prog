@@ -1,0 +1,409 @@
+@charset "utf-8";
+html{
+    font-size: 62.5%;/* 16px × 62.5% = 10px*/
+}
+
+body{
+    color: #333333;
+    font-family:"Open Sans",'ヒラギノ角ゴ ProN W3', Hiragino Kaku Gothic ProN, "メイリオ", Meiryo, sans-serif;
+    font-size: 1.6rem;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.heading{
+    color: #FFD61A;
+    font-size: 24px;
+    text-align: center;
+}
+
+.heading--jp{
+    display: block;
+    margin-top: 24px;
+    color: #333;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.btn{
+    width: 264px;
+    padding-top: 22px;
+    padding-left: 61px;
+    padding-right: 61px;
+    padding-bottom: 22px;
+    background-color: #FFD61A;
+    color: #fff;
+}
+
+/* --------------------
+    hero-image
+*--------------------- */
+.hero-image{
+    position: relative;
+}
+
+
+.hero-image__text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-50%,0);
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.hero-image__text--jp{
+    display: block;
+    margin-top: 24px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+
+/* --------------------
+        header
+*--------------------- */
+.header{
+    border-bottom: solid 1px #EFEFEF;
+}
+.wrapper{
+    max-width: 1140px;
+    margin: auto;
+}
+
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo{
+    width: 15%;
+}
+
+.nav-list{
+    display: flex;
+}
+
+.nav-item{
+    margin: 0 0 0 48px;
+}
+
+
+/* --------------------
+        about
+*--------------------- */
+
+.profile{
+    padding: 80px 0;
+}
+
+.about-wrapper{
+    width: 650px;
+    margin: auto;
+}
+
+.about-contents{
+    margin-top: 64px;
+    line-height: 1.5;
+}
+
+.about-text{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.about-image{
+    margin-top: 80px;
+}
+
+/* --------------------
+        course
+*--------------------- */
+
+.heading-course{
+    color: #333;
+}
+
+.course-wrapper{
+    width: 520px;
+    margin: auto;
+}
+
+.course-text{
+    line-height: 1.7;
+    margin-top: 32px;
+}
+
+.course-list{
+    margin-top: 64px;
+    background-color: #FAFAFA;
+}
+
+.course-item{
+    display: flex;
+    align-items: center;
+}
+
+.course-item:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+
+.course-photo{
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.course-subtext{
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.couse-subtitle{
+    margin: 0 48px 0;
+}
+
+.course-sentense{
+    margin: 40px 48px 0;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+
+/* --------------------
+        news
+*--------------------- */
+
+.news{
+    padding: 80px 0;
+}
+
+.news-heading{
+    color: #FFD61A;
+    font-size: 24px;
+    text-align: center;
+}
+
+.news-heading--jp{
+    display: block;
+    margin-top: 24px;
+    color: #333;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.news-list{
+    display: flex;
+    justify-content: space-between;
+    width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.news-card{
+    min-width: 33.333%;
+    margin-top: 64px;
+    justify-content: space-evenly;
+}
+
+.news-thumb{
+    width: 364px;
+}
+
+.news-contents{
+    margin-top: 24px;
+    padding-left: 16px;
+}
+.news-sub-heading{
+    font-weight: bold;
+}
+
+.news-descript{
+    margin-top: 24px;
+    line-height: 1.5;
+}
+
+.news-date{
+    margin-top: 16px;
+    color: #999999;
+    font-size: 14px;
+}
+
+.news-btn{
+    width: 264px;
+    padding-top: 22px;
+    padding-left: 61px;
+    padding-right: 61px;
+    padding-bottom: 22px;
+    background-color: #FFD61A;
+    color: #fff;
+}
+
+.news-footer{
+    margin-top: 62px;
+    text-align: center;
+}
+
+/* --------------------
+        access
+*--------------------- */
+.access{
+    background-color: #FAFAFA;
+    padding: 80px 0;
+}
+
+.access-wrapper{
+    width: 494px;
+    margin: auto;
+}
+.heading-access{
+    color: #333;
+}
+
+.map{
+    display: block;
+    margin: 40px 0 64px;
+}
+
+.access-inner{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 64px 0 0 0;
+}
+
+.access-title{
+    width: 97px;
+    margin: 0 24px 0 0;
+    font-weight: bold;
+    text-align: right;
+}
+
+.access-name{
+    width: 373px;
+    margin-bottom: 21px;
+}
+
+/* --------------------
+        contact
+*--------------------- */
+
+.contact{
+    padding: 65px 0 120px;
+}
+
+.heading-contact{
+    color: #333;
+}
+
+.form-wrapper{
+    width: 632px;
+    margin: auto;
+}
+
+.contact-contents{
+    margin-top: 48px;
+    line-height: 1.5;
+}
+
+.contact-text{
+    text-align: center;
+    margin-top: 48px;
+}
+
+.form-inner{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px 0 40px;
+}
+
+.form-title{
+    width: 120px;
+    margin: 24px 24px 0 0;
+    padding: 8px 0 0 0;
+    font-weight: bold;
+    text-align: right;
+}
+
+.form-title.check-radio{
+    padding: 0;
+}
+
+.form-item{
+    width: 388px;
+    margin-top: 24px;
+}
+
+.form-list{
+    font-size: 14px;
+}
+
+.form-answer{
+    margin-bottom: 26px;
+}
+
+.form-parts{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance:none;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    border: solid 1p #AAAAAA;
+    font-size: 1.6rem;
+
+}
+
+input[type*="radio"]{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance:none;
+    width: 16px;
+    height: 16px;
+    margin: 0 16px 0 0;
+    border:solid 1px #EEEEEE;
+    background-color: #EEEEEE;
+    border-radius: 50%;
+}
+
+input[type*="radio"]:checked{
+    background-color: #a0a0a0;
+
+}
+
+.btn-submit{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance:none;
+    border:none;
+}
+
+.contact-footer{
+    margin-top: 40px;
+    text-align: center;
+    display: block;
+}
+
+/* --------------------
+        footer
+*--------------------- */
+
+.footer{
+    padding: 33px 0;
+    background-color: #707070;
+}
+
+.copyrights{
+    color: #fff;
+    font-size: 14px;
+}
