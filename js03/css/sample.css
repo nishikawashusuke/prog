@@ -1,0 +1,21 @@
+header{
+    color: #0066CC;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+.name{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.text{
+    text-align: center;
+    margin-top: 10px;
+}
+
+#send{
+    margin-bottom: 10px;
+}
+

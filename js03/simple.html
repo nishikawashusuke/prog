@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/sample.css">
+<title>Chatアプリ</title>
+</head>
+<body>
+
+
+<!-- コンテンツ表示画面 -->
+<header>
+    <h1>掲示板</h1>
+</header>
+
+
+<div>
+    <div class="name">
+        名前:<input type="text" id="uname">
+    </div>
+    <div class="text">
+        <textarea id="text" cols="50" rows="10"></textarea><br>
+        <button id="send">送信</button>
+    </div>
+    <div id="output" style="height: 300px; overflow: auto; border:1px solid  #0066CC;"
+    ></div>
+</div>
+
+<!--/ コンテンツ表示画面 -->
+
+
+<!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- JQuery -->
+
+
+<!--** 以下Firebase **-->
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCrp-7Qkb0F-LLOTHXxbpH7fIF8bCSI7-o",
+    authDomain: "unit1-6c0bc.firebaseapp.com",
+    projectId: "unit1-6c0bc",
+    storageBucket: "unit1-6c0bc.appspot.com",
+    messagingSenderId: "933717974013",
+    appId: "1:933717974013:web:3e3628e041fbb7b5e0d794"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  const ref = firebase.database().ref();
+
+
+//送信イベント
+$("#send").on("click",function(){
+    const uname = $("#uname").val();
+    const text = $("#text").val();
+    const date  = new Date();
+    const year  = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const day   = date.getDate();
+    const hours = date.getHours();
+    const min   = date.getMinutes();
+    const time = year + '年' + month + '月' + day + '日' + hours + '時' + min + '分';
+    const msg = {
+        uname: uname, //送信名:値
+        text: text,    //送信名:値
+        time: time
+    }
+    ref.push(msg);    //サーバーにPush
+});
+
+//受信イベント
+ref.on("child_added",function(data){
+        const v = data.val(); //dataオブジェクトの中のData取得
+        const k = data.key;   //KEYを取得(削除に必要らしい)
+        const h = '<p>'+v.uname+'<br>'+v.text+'<br>'+v.time+'</p>';
+        $("#output").append(h);
+        const tdiv = document.getElementById( "output" );
+        tdiv.scrollTop = tdiv.scrollHeight;
+    });
+
+    //Enterで送信
+    $("#text").on("keydown",function(e){
+        console.log(e.keyCode)
+        if(e.keyCode==13){
+        const uname = $("#uname").val();
+        const text = $("#text").val();
+        const date  = new Date();
+        const year  = date.getFullYear();
+        const month = date.getMonth() + 1;
+        const day   = date.getDate();
+        const hours = date.getHours();
+        const min   = date.getMinutes();
+        const time = year + '年' + month + '月' + day + '日' + hours + '時' + min + '分';
+        const msg = {
+        uname: uname, //送信名:値
+        text: text,    //送信名:値
+        time: time
+    }
+    ref.push(msg);    //サーバーにPush
+        }
+    });
+
+</script>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
